@@ -6,7 +6,7 @@ const port = 8001
 
 app.use(express.json())
 
-app.get('/', (req: Request, res: Response) => {
+app.post('/', (req: Request, res: Response) => {
     console.log('fibiaan')
     res.send('hey')
 })

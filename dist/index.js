@@ -17,7 +17,7 @@ const fs_1 = require("fs");
 const app = (0, express_1.default)();
 const port = 8001;
 app.use(express_1.default.json());
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
     console.log('fibiaan');
     res.send('hey');
 });
