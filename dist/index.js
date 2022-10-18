@@ -17,13 +17,13 @@ const fs_1 = require("fs");
 const app = (0, express_1.default)();
 const port = 8001;
 app.use(express_1.default.json());
-app.post('/', (req, res) => {
+app.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     console.log('fibiaan');
+    yield (0, fs_1.writeFileSync)('query.json', JSON.stringify(req.body));
     res.send('hey');
-});
+}));
 app.post('/payload', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     console.log('payload');
-    yield (0, fs_1.writeFileSync)('query.json', JSON.stringify(req.body));
     console.log(req.body);
     res.end();
 }));
