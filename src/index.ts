@@ -7,7 +7,7 @@ const port = 8001
 app.use(express.json())
 
 app.post('/', async (req: Request, res: Response) => {
-    console.log('fibiaan')
+    console.log('Event received')
     await writeFileSync('query.json', JSON.stringify(req.body))
     res.send('hey')
 })
